@@ -118,18 +118,16 @@ html {
   min-height: 400px;
   width: 100%;
   background-image: linear-gradient(rgba(0, 0, 5, 0.5), rgba(0, 0, 5, 0.5)),
-    -webkit-image-set(
-      url("../public/images/heros/hero-image_2-small.jpg") 1x,
-      url("../public/images/heros/hero-image_2-large-large-large.jpg") 2x
-    );
-  background-image: image-set(
-    url("../public/images/heros/hero-image_2-small.jpg") 1x,
-    url("../public/images/heros/hero-image_2-large-large-large.jpg") 2x
-  );
+    url("../public/images/heros/hero-image_2-large.jpg");
   background-position: center;
   background-size: cover;
 }
-
+@media screen and (max-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 5, 0.5), rgba(0, 0, 5, 0.5)),
+      url("../public/images/heros/hero-image_2-small.jpg");
+  }
+}
 
 .hero-inner {
   text-align: center;
@@ -367,7 +365,7 @@ hr {
   align-items: center;
   padding: 8%;
 }
- 
+
 .input_section .form_review {
   border: 1px solid black;
   border-radius: 10px;
@@ -376,7 +374,7 @@ hr {
   padding: 20px;
   width: 60%;
 }
- 
+
 .input_section h2 {
   text-align: center;
   color: black;
@@ -384,11 +382,11 @@ hr {
   margin-top: 5px;
   font-size: 30px;
 }
- 
+
 .input_section form .input {
   margin: 18px 0;
 }
- 
+
 .input_section form button {
   background-color: #8b0000;
   color: white;
@@ -401,7 +399,7 @@ hr {
   padding: 15px;
   cursor: pointer;
 }
- 
+
 .input_section form .input input {
   display: block;
   width: 100%;
@@ -410,7 +408,7 @@ hr {
   border-radius: 5px;
   margin-top: 10px;
 }
- 
+
 .input_section form .input textarea {
   display: block;
   width: 100%;
@@ -455,7 +453,7 @@ hr {
   z-index: 9999;
   background-color: rgb(248, 246, 246);
 }
- 
+
 .preloader {
   width: 150px;
   height: 150px;
@@ -465,11 +463,11 @@ hr {
   margin: auto;
   animation: loading 2s linear infinite;
 }
- 
+
 .loader-hidden {
   visibility: hidden;
 }
- 
+
 @keyframes loading {
   from {
     transform: rotate(0deg);
